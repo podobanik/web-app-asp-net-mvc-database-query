@@ -1,0 +1,12 @@
+﻿@using WebAppAspNetMvcDatabaseQuery.Models
+@model Client
+
+<h3>Книга</h3>
+
+@using (Html.BeginForm("Create", "Clients", FormMethod.Post))
+{
+    @Html.EditorForModel()
+
+    <input type="submit" value="Сохранить" />
+    @Html.ActionLink("Отменить", "Index", "Clients")
+}
